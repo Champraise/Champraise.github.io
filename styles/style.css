@@ -1,83 +1,175 @@
 @import url("/styles/css-reset/reset.css");
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&display=swap');
+/*fonts*/
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap");
 /* Custom properties/Variables */
 :root {
-    --main-white: #f0f0f0;
-    --main-blue: #3b5998;
-    --dark-blue: #00003f;
-    --main-gray: #878787;
+  --main-white: #f0f0f0;
+  --main-blue: #3b5998;
+  --dark-blue: #00001a;
+  --main-gray: #878787;
 }
 /* box-sizing */
 html {
-    box-sizing: border-box;
-    /* Set font size for easy rem calculations
+  box-sizing: border-box;
+  /* Set font size for easy rem calculations
    * default document font size = 16px, 1rem = 16px, 100% = 16px
    * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
   */
-    font-size: 62.5%;
-    scroll-behavior: smooth;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 /* base styles */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.6rem; /* 16px */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.6rem; /* 16px */
 }
 h1,
 h2 {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 700;
-    text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  text-align: center;
 }
 
 h1 {
-    font-size: 6rem;
+  font-size: 6rem;
 }
 
 h2 {
-    font-size: 4.2rem;
+  font-size: 4.2rem;
+}
+/* logo */
+header h1 {
+  font-family: "Baloo 2", "Comic Sans MS", cursive;
+  color: var(--main-blue);
+  padding: 0;
+  margin: 1rem;
 }
 /* navigation */
 .nav {
-    background-color: var(--main-gray);
-    display: flex;
-    justify-content: space-between;
-    position: sticky;
-    top: 0;
-    left: 0;
+  width: 100%;
+  background-color: var(--main-white);
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  left: 0;
+  margin: 0 0 0.5rem 0;
+  box-shadow: 0.4rem 0 0.2rem 0.2rem var(--main-gray);
 }
-
 #navbar {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#navbar div {
+  padding: 0;
+  margin: 1.5rem;
 }
 /* main section */
 .main-section {
-    display: flex;
+  display: flex;
+  background-color: var(--dark-blue);
+  background: linear-gradient(157deg, rgba(38, 51, 128, 1) 0%, rgba(2, 0, 36, 1) 50%);
+  color: var(--main-white);
+  height: 100vh;
+  margin: 0 auto 0.5rem;
 }
-
+#profile-pic {
+  margin: 10vh auto;
+}
+#profile-pic img {
+  width: 100%;
+  height: auto;
+  border-radius: 100%;
+  padding: 0;
+  box-shadow: 0 0 0.4rem 0.2rem var(--main-blue);
+}
+#my-details {
+  height: auto;
+  text-align: center;
+  margin: 35vh auto 0;
+}
+#my-details h1 {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  margin: 1rem;
+}
+.dev-description {
+  font-size: 2rem;
+  padding: 0.5rem;
+}
+button.btn-details {
+  height: 4rem;
+  width: 25%;
+  font-weight: 700;
+  padding: 1rem;
+  margin: 2rem;
+  border: 0;
+  border-radius: 10rem;
+}
 /* Project tiles */
 .project-grid {
-    display: grid;
-    grid-template-columns: repeat(autofill, 1fr);
-    grid-template-areas: "box0 box0 box0"
-                         "box1 box2 box3";
+  background-color: var(--main-gray);
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  justify-content: space-evenly;
+  grid-template-areas:
+    "box0 box0 box0"
+    "box1 box2 box3";
 }
 .tile-0 {
-    grid-area: box0;
+  grid-area: box0;
 }
 .tile-1 {
-    grid-area: box1;
+  grid-area: box1;
 }
 .tile-2 {
-    grid-area: box2;
+  grid-area: box2;
 }
 .tile-3 {
-    grid-area: box3;
+  grid-area: box3;
+}
+.project-tile img {
+  width: 100%;
+}
+.project-tile p {
+  width: 100%;
+  height: 2rem;
+  font-weight: 600;
+  text-align: center;
+  background-color: var(--main-white);
+  padding: 1rem 0;
+  margin: 0.5rem 0;
+  border-radius: 5rem;
 }
 /* Social link section */
+#social-link-pg > h2 {
+  padding: 1rem;
+  margin: 0 auto 2rem;
+}
 .social-lk-cnt {
-    display: flex;
-    justify-content: space-evenly;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 2rem;
+}
+.media-link a {
+  text-decoration: none;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--main-blue);
+}
+.media-link a:hover {
+    color: orange;
+}
+.media-link a:active {
+    color: orangered;
+}
+footer {
+  text-align: center;
+  margin: 0.5rem;
 }
