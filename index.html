@@ -11,9 +11,15 @@
     <header class="nav">
       <div id="logo-text"><h1>Champraise</h1></div>
       <nav id="navbar">
-        <div id="Home">Home</div>
-        <div id="Projects">Projects</div>
-        <div id="Contact">Contact</div>
+        <div id="nav-home">
+          <a href="#welcome-section">Home</a>
+        </div>
+        <div id="nav-projects">
+          <a href="#projects">Projects</a>
+        </div>
+        <div id="Contact">
+          <a href="#social-link-pg">About Me</a>
+        </div>
       </nav>
     </header>
     <main>
@@ -24,25 +30,32 @@
         <div id="my-details">
           <h1>Tochukwu Ofodum</h1>
           <p class="dev-description">Web developer, UI/UX designer, Machine Learning enthusiastic</p>
-          <button id="github-btn" onclick="window.location.href = 'https://github.com/Champraise'" class="btn-details"> GitHub
-          </button>
-          <button id="email-btn" onclick="window.location.href = 'mailto:championpraise16@gmail.com'" class="btn-details">Email
-          </button>
+          <button id="github-btn" onclick="window.location.href = 'https://github.com/Champraise'" class="btn-details">GitHub</button>
+          <button id="email-btn" onclick="window.location.href = 'mailto:championpraise16@gmail.com'" class="btn-details">Email</button>
         </div>
       </section>
       <section id="projects" class="project-grid">
         <h2 class="tile-0">Projects</h2>
         <div class="project-tile tile-1">
-          <img src="/images/my-tribute-pg.jpg" alt="This is the picture of a sample tribute web page, click to visit the page." />
-          <p>Tribute Page</p>
+          <a href="#" class="tile-link">
+            <img src="/images/my-tribute-pg.jpg" alt="This is the picture of a sample tribute web page, click to visit the page." />
+            <p>Tribute Page</p>
+          </a>
         </div>
         <div class="project-tile tile-2">
-          <img src="/images/form-pg.jpg" alt="This is the picture of a sample form web page, click to visit the page." />
-          <p>Form Page</p>
+          <a href="#" class="tile-link">
+            <img src="/images/form-pg.jpg" alt="This is the picture of a sample form web page, click to visit the page." />
+            <p>Form Page</p>
+          </a>
         </div>
         <div class="project-tile tile-3">
-          <img src="/images/documentation-pg.jpg" alt="This is the picture of the sample documentation web page, click to visit the page" />
-          <p>Documentation page</p>
+          <a href="#" class="tile-link">
+            <img
+              src="/images/documentation-pg.jpg"
+              alt="This is the picture of the sample documentation web page, click to visit the page"
+            />
+            <p>Documentation page</p>
+          </a>
         </div>
       </section>
       <section id="social-link-pg">
